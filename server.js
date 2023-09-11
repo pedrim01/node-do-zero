@@ -11,13 +11,13 @@
 // server.listen(3333)
 
 
-import { server } from "server";
+import { fastify } from "fastify";
 
 // import { DatabaseMemory } from "./database-memory.js";
 import { DatabasePostgres } from "./database-postgres.js";
 
 
-const server = server()
+const server = fastify()
 
 // const database = new DatabaseMemory()
 const database = new DatabasePostgres
@@ -80,7 +80,7 @@ server.delete('/videos/:id', (request, reply) => {
 })
 
 
-const port = process.env.PORT || 3334;
+const port = process.env.PORT || 3000;
 const host = ("RENDER" in process.env) ? `0.0.0.0` : `localhost`;
 
 
