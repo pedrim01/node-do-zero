@@ -20,7 +20,7 @@ import { DatabasePostgres } from "./database-postgres.js";
 const server = fastify()
 
 // const database = new DatabaseMemory()
- const database = new DatabasePostgres
+const database = new DatabasePostgres
 
 
 // CRUD
@@ -67,7 +67,7 @@ server.put('/videos/:id', (request, reply) => {
 
 })
 
-server.delete('/videos/:id', (request,reply) => {
+server.delete('/videos/:id', (request, reply) => {
 
   const videoId = request.params.id
 
@@ -80,6 +80,7 @@ server.delete('/videos/:id', (request,reply) => {
 })
 
 server.listen({
-  port: 3333,
+  host: '0.0.0.0',
+  port: process.env.PORT ?? 3333,
 
 })

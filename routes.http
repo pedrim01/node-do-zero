@@ -1,9 +1,9 @@
-POST http://localhost:3333/videos
+POST https://node-do-zero-f272.onrender.com/videos
 Content-Type: application/json
 
 
 {
-  "title" : "Video 01",
+  "title" : "Video node",
   "description" : "Video 01 é esse",
   "duration": 200
 
@@ -11,24 +11,24 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:3333/videos
+GET https://node-do-zero-f272.onrender.com/videos
 
 
 ###
-GET http://localhost:3333/videos?search=node
+GET https://node-do-zero-f272.onrender.com/videos?search=testeeeeeeeeeee
 
 
 ###
-PUT http://localhost:3333/videos/ab2ed553-490c-4bd8-9635-a7d82a3ca014
+PUT https://node-do-zero-f272.onrender.com/videos/ff73b331-c747-430c-bbba-d5c203add6b6
 Content-Type: application/json
 
 
 {
-  "title" : "Video 01111",
+  "title" : "Video testeeeeeeeeeee",
   "description" : "Video 01 é esse",
   "duration": 200
 
 }
 
 ###
-DELETE  http://localhost:3333/videos/8a74468b-6501-4a3a-9e2a-4b638f7e0552
+DELETE  https://node-do-zero-f272.onrender.com/videos/ff73b331-c747-430c-bbba-d5c203add6b6
